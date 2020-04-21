@@ -16,6 +16,7 @@ namespace AuxEmergencial
             // Código que é executado na inicialização do aplicativo
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            DevExpress.XtraReports.Web.ASPxWebDocumentViewer.StaticInitialize();
         }
     }
 }

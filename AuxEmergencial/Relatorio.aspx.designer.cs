@@ -10,33 +10,33 @@
 namespace AuxEmergencial {
     
     
-    public partial class _Default {
+    public partial class Relatorio {
         
         /// <summary>
-        /// Controle btnAdd.
+        /// Controle dataInicial.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton btnAdd;
+        protected global::System.Web.UI.WebControls.TextBox dataInicial;
         
         /// <summary>
-        /// Controle bntRelatorio.
+        /// Controle dataFinal.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton bntRelatorio;
+        protected global::System.Web.UI.WebControls.TextBox dataFinal;
         
         /// <summary>
-        /// Controle grid.
+        /// Controle btnRelatorio.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView grid;
+        protected global::System.Web.UI.WebControls.Button btnRelatorio;
     }
 }

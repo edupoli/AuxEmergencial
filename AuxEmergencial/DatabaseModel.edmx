@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="prefeituraModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="auxemergencial">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="nirsas" Type="int" />
+          <Property Name="nome" Type="varchar" MaxLength="255" />
+          <Property Name="dataNascimento" Type="date" />
+          <Property Name="cpf" Type="varchar" MaxLength="45" />
+          <Property Name="cep" Type="varchar" MaxLength="45" />
+          <Property Name="rua" Type="varchar" MaxLength="255" />
+          <Property Name="numero" Type="varchar" MaxLength="45" />
+          <Property Name="bairro" Type="varchar" MaxLength="255" />
+          <Property Name="complemento" Type="varchar" MaxLength="255" />
+          <Property Name="cidade" Type="varchar" MaxLength="255" />
+          <Property Name="estado" Type="varchar" MaxLength="45" />
+          <Property Name="telefone" Type="varchar" MaxLength="45" />
+          <Property Name="pmtr" Type="varchar" MaxLength="45" />
+          <Property Name="bee" Type="varchar" MaxLength="45" />
+          <Property Name="cesta" Type="varchar" MaxLength="45" />
+          <Property Name="bf" Type="varchar" MaxLength="45" />
+          <Property Name="bpc" Type="varchar" MaxLength="45" />
+          <Property Name="observacoes" Type="varchar" MaxLength="45" />
+          <Property Name="urgente" Type="varchar" MaxLength="45" />
+          <Property Name="dataCadastro" Type="datetime" Precision="0" />
+        </EntityType>
+        <EntityContainer Name="prefeituraModelStoreContainer">
+          <EntitySet Name="auxemergencial" EntityType="Self.auxemergencial" Schema="prefeitura" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="prefeituraModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="auxemergencial">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="nirsas" Type="Int32" />
+          <Property Name="nome" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dataNascimento" Type="DateTime" />
+          <Property Name="cpf" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="cep" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="rua" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="numero" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="bairro" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="cidade" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="estado" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="telefone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="pmtr" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="bee" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="cesta" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="bf" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="bpc" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="observacoes" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="urgente" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="complemento" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dataCadastro" Type="DateTime" />
+        </EntityType>
+        <EntityContainer Name="prefeituraEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="auxemergencials" EntityType="Self.auxemergencial" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="prefeituraModelStoreContainer" CdmEntityContainer="prefeituraEntities">
+          <EntitySetMapping Name="auxemergencials">
+            <EntityTypeMapping TypeName="prefeituraModel.auxemergencial">
+              <MappingFragment StoreEntitySet="auxemergencial">
+                <ScalarProperty Name="dataCadastro" ColumnName="dataCadastro" />
+                <ScalarProperty Name="complemento" ColumnName="complemento" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nirsas" ColumnName="nirsas" />
+                <ScalarProperty Name="nome" ColumnName="nome" />
+                <ScalarProperty Name="dataNascimento" ColumnName="dataNascimento" />
+                <ScalarProperty Name="cpf" ColumnName="cpf" />
+                <ScalarProperty Name="cep" ColumnName="cep" />
+                <ScalarProperty Name="rua" ColumnName="rua" />
+                <ScalarProperty Name="numero" ColumnName="numero" />
+                <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="cidade" ColumnName="cidade" />
+                <ScalarProperty Name="estado" ColumnName="estado" />
+                <ScalarProperty Name="telefone" ColumnName="telefone" />
+                <ScalarProperty Name="pmtr" ColumnName="pmtr" />
+                <ScalarProperty Name="bee" ColumnName="bee" />
+                <ScalarProperty Name="cesta" ColumnName="cesta" />
+                <ScalarProperty Name="bf" ColumnName="bf" />
+                <ScalarProperty Name="bpc" ColumnName="bpc" />
+                <ScalarProperty Name="observacoes" ColumnName="observacoes" />
+                <ScalarProperty Name="urgente" ColumnName="urgente" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
