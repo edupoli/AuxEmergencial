@@ -14,6 +14,7 @@ namespace AuxEmergencial
             XtraReport1 report = new XtraReport1();
             report.Parameters["dataInicial"].Value = Session["dataInicial"].ToString();
             report.Parameters["dataFinal"].Value = Session["dataFinal"].ToString();
+            report.Parameters["finalidade"].Value = Session["finalidade"].ToString();
             report.RequestParameters = false;
             ASPxWebDocumentViewer1.OpenReport(report);
         }

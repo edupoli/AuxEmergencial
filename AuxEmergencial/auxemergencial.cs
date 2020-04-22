@@ -35,5 +35,6 @@ namespace AuxEmergencial
         public string urgente { get; set; }
         public string complemento { get; set; }
         public Nullable<System.DateTime> dataCadastro { get; set; }
+        public string finalidade { get; set; }
     }
 }

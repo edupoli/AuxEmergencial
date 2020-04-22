@@ -4,6 +4,17 @@
     <h3>Cadastro</h3>
     <br />
 <div class="container">
+<div class="form-row">
+    <div class="form-group col-md-12">
+      <label>FINALIDADE DO CADASTRO</label>
+        <asp:DropDownList runat="server" CssClass="form-control" ID="cboxTipoCadastro">
+            <asp:ListItem Text="SELECIONE" Value="selecione"/>
+            <asp:ListItem Text="CADASTRO CADÚNICO"  Value="cadunico"/>
+            <asp:ListItem Text="CADASTRO KIT CESTA BÁSICA" Value="cesta"/>
+            <asp:ListItem Text="CADASTRO AUXÍLIO EMERGENCIAL" Value="auxEmergencial"/>
+        </asp:DropDownList>
+    </div>
+</div>
   <div class="form-row">
     <div class="form-group col-md-2">
       <label>N.IRSAS</label>

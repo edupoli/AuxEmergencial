@@ -19,29 +19,23 @@ namespace AuxEmergencial
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (nirsas.Text=="")
+            if (cboxTipoCadastro.SelectedValue == "selecione")
             {
-                mensagem = "Campo N.IRSAS é obrigatorio!!";
+                mensagem = "Favor selecionar a Finalidade do Cadastro !!!";
                 ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
-                nirsas.Focus();
+                cboxTipoCadastro.Focus();
             }else
-                if (nome.Text=="")
+            if (nome.Text=="")
             {
                 mensagem = "Campo Nome é obrigatório favor informar !!!";
                 ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
                 nome.Focus();
             }else
-                if (cpf.Text=="")
+                if (observacoes.Text=="")
             {
-                mensagem = "Campo CPF é obrigatório favor informar !!!";
+                mensagem = "É obrigatório o preenchimento de informações adicionais Complementares!!";
                 ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
-                cpf.Focus();
-            }else
-                if (telefone.Text=="")
-            {
-                mensagem = "É obrigatório o preenchimento do campo Telefone!!";
-                ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
-                telefone.Focus();
+                observacoes.Focus();
             }
             else
             {
@@ -61,6 +55,7 @@ namespace AuxEmergencial
                     aux.cidade = cidade.Text.Trim();
                     aux.estado = estado.Text.Trim();
                     aux.complemento = complemento.Text.Trim();
+                    aux.finalidade = cboxTipoCadastro.SelectedValue;
                     aux.dataCadastro = DateTime.Today;
                     if (bee.Checked == true)
                     {
@@ -133,6 +128,7 @@ namespace AuxEmergencial
                     pmtr.Checked = false;
                     cesta.Checked = false;
                     urgente.Checked = false;
+                    cboxTipoCadastro.SelectedIndex = 0;
 
                 }
                 catch (System.Exception)

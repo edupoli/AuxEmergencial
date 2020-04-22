@@ -18,6 +18,15 @@
       <label for="Nome">Ate</label>
         <asp:TextBox runat="server" CssClass="form-control" ID="dataFinal" placeholder="Fim"/>
     </div>
+    <div class="form-group col-md-4">
+      <label for="Nome">Tipo de Cadastro</label>
+        <asp:DropDownList runat="server" CssClass="form-control" ID="cboxTipoCadastro">
+            <asp:ListItem Text="SELECIONE" Value="selecione"/>
+            <asp:ListItem Text="CADASTRO CADÚNICO"  Value="cadunico"/>
+            <asp:ListItem Text="CADASTRO KIT CESTA BÁSICA" Value="cesta"/>
+            <asp:ListItem Text="CADASTRO AUXÍLIO EMERGENCIAL" Value="auxEmergencial"/>
+        </asp:DropDownList>
+    </div>
       <div class="form-group col-md-2">
           <asp:Label Text="&nbsp;" runat="server" />
           

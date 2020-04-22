@@ -18,6 +18,7 @@ namespace AuxEmergencial
         {
             Session["dataInicial"] = dataInicial.Text;
             Session["dataFinal"] = dataFinal.Text;
+            Session["finalidade"] = cboxTipoCadastro.SelectedValue;
             Response.Redirect("ViewerRelatorio.aspx");
         }
     }

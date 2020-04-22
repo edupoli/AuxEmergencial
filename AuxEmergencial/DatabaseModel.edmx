@@ -29,6 +29,7 @@
           <Property Name="bpc" Type="varchar" MaxLength="45" />
           <Property Name="observacoes" Type="varchar" MaxLength="45" />
           <Property Name="urgente" Type="varchar" MaxLength="45" />
+          <Property Name="finalidade" Type="varchar" MaxLength="255" />
           <Property Name="dataCadastro" Type="datetime" Precision="0" />
         </EntityType>
         <EntityContainer Name="prefeituraModelStoreContainer">
@@ -63,6 +64,7 @@
           <Property Name="urgente" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="complemento" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="dataCadastro" Type="DateTime" />
+          <Property Name="finalidade" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityContainer Name="prefeituraEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="auxemergencials" EntityType="Self.auxemergencial" />
@@ -76,6 +78,7 @@
           <EntitySetMapping Name="auxemergencials">
             <EntityTypeMapping TypeName="prefeituraModel.auxemergencial">
               <MappingFragment StoreEntitySet="auxemergencial">
+                <ScalarProperty Name="finalidade" ColumnName="finalidade" />
                 <ScalarProperty Name="dataCadastro" ColumnName="dataCadastro" />
                 <ScalarProperty Name="complemento" ColumnName="complemento" />
                 <ScalarProperty Name="id" ColumnName="id" />

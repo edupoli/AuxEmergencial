@@ -62,6 +62,7 @@ namespace AuxEmergencial
                 urgente.Checked = true;
             }
             observacoes.Text = aux.observacoes;
+            cboxTipoCadastro.SelectedValue = aux.finalidade;
 
         }
 
@@ -109,35 +110,28 @@ namespace AuxEmergencial
         protected void btnSalvar_Click(object sender, EventArgs e)
         {
 
-                if (nirsas.Text == "")
-                {
-                    mensagem = "Campo N.IRSAS é obrigatorio!!";
-                    ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
-                    nirsas.Focus();
-                }
-                else
-                    if (nome.Text == "")
-                {
-                    mensagem = "Campo Nome é obrigatório favor informar !!!";
-                    ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
-                    nome.Focus();
-                }
-                else
-                    if (cpf.Text == "")
-                {
-                    mensagem = "Campo CPF é obrigatório favor informar !!!";
-                    ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
-                    cpf.Focus();
-                }
-                else
-                    if (telefone.Text == "")
-                {
-                    mensagem = "É obrigatório o preenchimento do campo Telefone!!";
-                    ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
-                    telefone.Focus();
-                }
-                else
-                {
+            if (cboxTipoCadastro.SelectedValue == "selecione")
+            {
+                mensagem = "Favor selecionar a Finalidade do Cadastro !!!";
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
+                cboxTipoCadastro.Focus();
+            }
+            else
+          if (nome.Text == "")
+            {
+                mensagem = "Campo Nome é obrigatório favor informar !!!";
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
+                nome.Focus();
+            }
+            else
+              if (observacoes.Text == "")
+            {
+                mensagem = "É obrigatório o preenchimento de informações adicionais Complementares!!";
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
+                observacoes.Focus();
+            }
+            else
+            {
                     try
                     {
                         int auxID = int.Parse(id);
@@ -156,6 +150,7 @@ namespace AuxEmergencial
                         aux.cidade = cidade.Text.Trim();
                         aux.estado = estado.Text.Trim();
                         aux.complemento = complemento.Text.Trim();
+                        aux.finalidade = cboxTipoCadastro.SelectedValue;
                         
                         if (bee.Checked == true)
                         {
@@ -227,6 +222,7 @@ namespace AuxEmergencial
                         pmtr.Checked = false;
                         cesta.Checked = false;
                         urgente.Checked = false;
+                        cboxTipoCadastro.SelectedIndex = 0;
                         //Response.Redirect("Default.aspx");
 
                     }

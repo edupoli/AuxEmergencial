@@ -31,6 +31,15 @@ namespace AuxEmergencial {
         protected global::System.Web.UI.WebControls.TextBox dataFinal;
         
         /// <summary>
+        /// Controle cboxTipoCadastro.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList cboxTipoCadastro;
+        
+        /// <summary>
         /// Controle btnRelatorio.
         /// </summary>
         /// <remarks>
