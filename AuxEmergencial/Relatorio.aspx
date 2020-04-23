@@ -22,9 +22,9 @@
       <label for="Nome">Tipo de Cadastro</label>
         <asp:DropDownList runat="server" CssClass="form-control" ID="cboxTipoCadastro">
             <asp:ListItem Text="SELECIONE" Value="selecione"/>
-            <asp:ListItem Text="CADASTRO CADÚNICO"  Value="cadunico"/>
-            <asp:ListItem Text="CADASTRO KIT CESTA BÁSICA" Value="cesta"/>
-            <asp:ListItem Text="CADASTRO AUXÍLIO EMERGENCIAL" Value="auxEmergencial"/>
+            <asp:ListItem Text="CADASTRO CADÚNICO"  Value="CADASTRO CADUNICO"/>
+            <asp:ListItem Text="CADASTRO KIT CESTA BÁSICA" Value="CADASTRO KIT CESTA BASICA"/>
+            <asp:ListItem Text="CADASTRO AUXÍLIO EMERGENCIAL" Value="CADASTRO AUXILIO EMERGENCIAL"/>
         </asp:DropDownList>
     </div>
       <div class="form-group col-md-2">

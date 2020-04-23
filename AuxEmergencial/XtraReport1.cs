@@ -59,6 +59,8 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
     private XRLabel xrLabel15;
     private XRLabel xrLabel14;
     private DevExpress.XtraReports.Parameters.Parameter finalidade;
+    private XRLabel xrLabel19;
+    private XRLabel xrLabel18;
 
     /// <summary>
     /// Required designer variable.
@@ -150,6 +152,8 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.tableCell25 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell26 = new DevExpress.XtraReports.UI.XRTableCell();
             this.finalidade = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -242,7 +246,7 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.TopMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPictureBox1});
             this.TopMargin.Dpi = 254F;
-            this.TopMargin.HeightF = 182.7741F;
+            this.TopMargin.HeightF = 178.67F;
             this.TopMargin.Name = "TopMargin";
             // 
             // xrPictureBox1
@@ -284,13 +288,15 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel19,
+            this.xrLabel18,
             this.xrLabel17,
             this.xrLabel16,
             this.xrLabel15,
             this.xrLabel14,
             this.label1});
             this.ReportHeader.Dpi = 254F;
-            this.ReportHeader.HeightF = 162.0075F;
+            this.ReportHeader.HeightF = 193.146F;
             this.ReportHeader.Name = "ReportHeader";
             // 
             // xrLabel17
@@ -298,7 +304,7 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel17.Dpi = 254F;
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?dataFinal")});
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(468.4375F, 78.58754F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(468.4375F, 76.30589F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -311,7 +317,7 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.xrLabel16.Dpi = 254F;
             this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?dataInicial")});
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(238.25F, 78.5875F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(238.25F, 76.30589F);
             this.xrLabel16.Multiline = true;
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -322,7 +328,7 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             // xrLabel15
             // 
             this.xrLabel15.Dpi = 254F;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(15.99999F, 78.58746F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(15.99999F, 76.30589F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
@@ -890,6 +896,28 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.finalidade.Name = "finalidade";
             this.finalidade.ValueInfo = "cadunico";
             // 
+            // xrLabel18
+            // 
+            this.xrLabel18.Dpi = 254F;
+            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(15.99999F, 134.726F);
+            this.xrLabel18.Multiline = true;
+            this.xrLabel18.Name = "xrLabel18";
+            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel18.SizeF = new System.Drawing.SizeF(187.8542F, 58.42F);
+            this.xrLabel18.Text = "Finalidade:";
+            // 
+            // xrLabel19
+            // 
+            this.xrLabel19.Dpi = 254F;
+            this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?finalidade")});
+            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(203.8542F, 134.726F);
+            this.xrLabel19.Multiline = true;
+            this.xrLabel19.Name = "xrLabel19";
+            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(820.2084F, 58.42F);
+            this.xrLabel19.Text = "xrLabel19";
+            // 
             // XtraReport1
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -905,7 +933,7 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.Dpi = 254F;
             this.Font = new System.Drawing.Font("Arial", 9.75F);
             this.Landscape = true;
-            this.Margins = new System.Drawing.Printing.Margins(150, 150, 183, 150);
+            this.Margins = new System.Drawing.Printing.Margins(150, 150, 179, 150);
             this.PageHeight = 2100;
             this.PageWidth = 2970;
             this.PaperKind = System.Drawing.Printing.PaperKind.A4;
