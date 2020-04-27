@@ -137,11 +137,17 @@ namespace AuxEmergencial
                         int auxID = int.Parse(id);
                         prefeituraEntities ctx = new prefeituraEntities();
                         auxemergencial aux = ctx.auxemergencials.First(p => p.id == auxID);
-                        aux.nirsas = int.Parse(nirsas.Text.Trim());
+                        if (nirsas.Text.Trim() != "")
+                        {
+                            aux.nirsas = int.Parse(nirsas.Text.Trim());
+                        }
                         aux.nome = nome.Text.Trim();
                         aux.telefone = telefone.Text.Trim();
                         aux.cpf = cpf.Text.Trim();
-                        aux.dataNascimento = Convert.ToDateTime(dataNascimento.Text.Trim());
+                        if (dataNascimento.Text.Trim() != "")
+                        {
+                            aux.dataNascimento = Convert.ToDateTime(dataNascimento.Text.Trim());
+                        }
                         aux.observacoes = observacoes.Text.Trim();
                         aux.cep = cepe.Text.Trim();
                         aux.rua = rua.Text.Trim();

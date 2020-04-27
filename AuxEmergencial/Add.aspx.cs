@@ -42,11 +42,17 @@ namespace AuxEmergencial
                 try
                 {
                     auxemergencial aux = new auxemergencial();
-                    aux.nirsas = int.Parse(nirsas.Text.Trim());
+                    if (nirsas.Text.Trim() != "")
+                    {
+                        aux.nirsas = int.Parse(nirsas.Text.Trim());
+                    }
                     aux.nome = nome.Text.Trim();
                     aux.telefone = telefone.Text.Trim();
                     aux.cpf = cpf.Text.Trim();
-                    aux.dataNascimento = Convert.ToDateTime(dataNascimento.Text.Trim());
+                    if (dataNascimento.Text.Trim() != "")
+                    {
+                        aux.dataNascimento = Convert.ToDateTime(dataNascimento.Text.Trim());
+                    }
                     aux.observacoes = observacoes.Text.Trim();
                     aux.cep = cep.Text.Trim();
                     aux.rua = rua.Text.Trim();
@@ -131,9 +137,9 @@ namespace AuxEmergencial
                     cboxTipoCadastro.SelectedIndex = 0;
 
                 }
-                catch (System.Exception)
+                catch (System.Exception ex)
                 {
-                    mensagem = "Ocorreu um erro ao Cadastrar";
+                    mensagem = "Erro ao Cadastrar " + ex.Message;
                     ClientScript.RegisterStartupScript(GetType(), "Popup", "erroGeral();", true);
                     //throw;
                 }

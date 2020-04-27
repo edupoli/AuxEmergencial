@@ -35,6 +35,7 @@ namespace AuxEmergencial
             cidade.Text = aux.cidade;
             estado.Text = aux.estado;
             telefone.Text = aux.telefone;
+            cboxTipoCadastro.SelectedValue = aux.finalidade;
             if (aux.pmtr == "SIM")
             {
                 pmtr.Checked = true;

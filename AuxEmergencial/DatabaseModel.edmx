@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="prefeituraModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+      <Schema Namespace="prefeituraModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="auxemergencial">
           <Key>
             <PropertyRef Name="id" />
@@ -27,7 +27,7 @@
           <Property Name="cesta" Type="varchar" MaxLength="45" />
           <Property Name="bf" Type="varchar" MaxLength="45" />
           <Property Name="bpc" Type="varchar" MaxLength="45" />
-          <Property Name="observacoes" Type="varchar" MaxLength="45" />
+          <Property Name="observacoes" Type="longtext" />
           <Property Name="urgente" Type="varchar" MaxLength="45" />
           <Property Name="finalidade" Type="varchar" MaxLength="255" />
           <Property Name="dataCadastro" Type="datetime" Precision="0" />
@@ -35,7 +35,8 @@
         <EntityContainer Name="prefeituraModelStoreContainer">
           <EntitySet Name="auxemergencial" EntityType="Self.auxemergencial" Schema="prefeitura" store:Type="Tables" />
         </EntityContainer>
-      </Schema></edmx:StorageModels>
+      </Schema>
+    </edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="prefeituraModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -52,6 +53,7 @@
           <Property Name="rua" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="numero" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="bairro" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="complemento" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="cidade" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
           <Property Name="estado" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="telefone" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
@@ -60,11 +62,10 @@
           <Property Name="cesta" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="bf" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="bpc" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="observacoes" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+          <Property Name="observacoes" Type="String" MaxLength="1073741823" FixedLength="false" Unicode="false" />
           <Property Name="urgente" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="complemento" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
-          <Property Name="dataCadastro" Type="DateTime" />
           <Property Name="finalidade" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="dataCadastro" Type="DateTime" />
         </EntityType>
         <EntityContainer Name="prefeituraEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="auxemergencials" EntityType="Self.auxemergencial" />
@@ -78,9 +79,6 @@
           <EntitySetMapping Name="auxemergencials">
             <EntityTypeMapping TypeName="prefeituraModel.auxemergencial">
               <MappingFragment StoreEntitySet="auxemergencial">
-                <ScalarProperty Name="finalidade" ColumnName="finalidade" />
-                <ScalarProperty Name="dataCadastro" ColumnName="dataCadastro" />
-                <ScalarProperty Name="complemento" ColumnName="complemento" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="nirsas" ColumnName="nirsas" />
                 <ScalarProperty Name="nome" ColumnName="nome" />
@@ -90,6 +88,7 @@
                 <ScalarProperty Name="rua" ColumnName="rua" />
                 <ScalarProperty Name="numero" ColumnName="numero" />
                 <ScalarProperty Name="bairro" ColumnName="bairro" />
+                <ScalarProperty Name="complemento" ColumnName="complemento" />
                 <ScalarProperty Name="cidade" ColumnName="cidade" />
                 <ScalarProperty Name="estado" ColumnName="estado" />
                 <ScalarProperty Name="telefone" ColumnName="telefone" />
@@ -100,6 +99,8 @@
                 <ScalarProperty Name="bpc" ColumnName="bpc" />
                 <ScalarProperty Name="observacoes" ColumnName="observacoes" />
                 <ScalarProperty Name="urgente" ColumnName="urgente" />
+                <ScalarProperty Name="finalidade" ColumnName="finalidade" />
+                <ScalarProperty Name="dataCadastro" ColumnName="dataCadastro" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -23,6 +23,7 @@ namespace AuxEmergencial
         public string rua { get; set; }
         public string numero { get; set; }
         public string bairro { get; set; }
+        public string complemento { get; set; }
         public string cidade { get; set; }
         public string estado { get; set; }
         public string telefone { get; set; }
@@ -33,8 +34,7 @@ namespace AuxEmergencial
         public string bpc { get; set; }
         public string observacoes { get; set; }
         public string urgente { get; set; }
-        public string complemento { get; set; }
-        public Nullable<System.DateTime> dataCadastro { get; set; }
         public string finalidade { get; set; }
+        public Nullable<System.DateTime> dataCadastro { get; set; }
     }
 }
