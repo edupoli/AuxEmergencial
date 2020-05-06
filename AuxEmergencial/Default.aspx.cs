@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -15,9 +17,10 @@ namespace AuxEmergencial
         {
             if (!Page.IsPostBack)
             {
-                grid.DataSource = GetAuxemergencials();
+                grid.DataSource = getAux();
                 grid.DataBind();
             }
+            
         }
 
         protected void btnEditar_Click(object sender, EventArgs e)
@@ -43,7 +46,7 @@ namespace AuxEmergencial
                 ctx.SaveChanges();
                 mensagem = "Excluido com Sucesso!!";
                 ClientScript.RegisterStartupScript(GetType(), "Popup", "sucesso();", true);
-                grid.DataSource = GetAuxemergencials();
+                grid.DataSource = getAux();
                 grid.DataBind();
             }
             catch (Exception)
@@ -53,10 +56,23 @@ namespace AuxEmergencial
                 //throw;
             }
         }
-        public List<auxemergencial> GetAuxemergencials()
+        
+
+        private object getAux()
         {
-            var ctx = new prefeituraEntities();
-            return ctx.auxemergencials.Take(200).ToList();
+            string conec = "SERVER=10.0.2.9;UID=ura;PWD=ask123;Allow User Variables=True;Pooling=False";
+            MySqlConnection con = new MySqlConnection(conec);
+            string sql = "SELECT * FROM prefeitura.auxemergencial order by dataCadastro desc limit 200";
+            MySqlCommand cmd;
+            con.Open();
+            DataTable dt = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            cmd = new MySqlCommand(sql, con);
+            da.SelectCommand = cmd;
+            da.Fill(dt);
+            int num = dt.Rows.Count;
+            return dt;
+            
         }
 
         protected void btnAdd_Click(object sender, EventArgs e)

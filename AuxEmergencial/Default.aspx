@@ -40,9 +40,9 @@
 
     <div class="table-responsive">
 
-    <asp:GridView ID="grid" class="table table-striped table-hover table-sm" runat="server" AutoGenerateColumns="False" EmptyDataText="Não exitem dados cadastrados!!">
+    <asp:GridView ID="grid" class="table table-striped table-hover table-sm" runat="server"  AutoGenerateColumns="False" EmptyDataText="Não exitem dados cadastrados!!">
         <Columns>
-            <asp:BoundField DataField="dataCadastro" dataformatstring="{0:dd/MM/yyyy}"  HeaderText="Data de Cadastro" />
+            <asp:BoundField DataField="dataCadastro" dataformatstring="{0:dd/MM/yyyy}"  HeaderText="Data de Cadastro" SortExpression="dataCadastro" />
             <asp:BoundField DataField="nirsas" HeaderText="N.IRSAS" />
             <asp:BoundField DataField="nome" HeaderText="Nome" />
             <asp:BoundField DataField="cpf" HeaderText="CPF" />
@@ -89,6 +89,7 @@
             $('#<%= grid.ClientID%>').prepend($("<thead></thead>").append($("#<%= grid.ClientID%>").find("tr:first"))).DataTable({
                 "bJQueryUI": true,
                 "autoWidth": true,
+                "order": [[ 0, "desc" ]],
                  
                 "oLanguage": {
                     "sProcessing":   "Processando...",

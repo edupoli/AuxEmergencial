@@ -43,7 +43,7 @@
         $('[id*=dataInicial]').datepicker({
             changeMonth: true,
             changeYear: true,
-            format: "yyyy-mm-dd",
+            format: "yyyy-mm-dd 00:00:00",
             language: "pt-br"
         });
     });
@@ -52,7 +52,7 @@
         $('[id*=dataFinal]').datepicker({
             changeMonth: true,
             changeYear: true,
-            format: "yyyy-mm-dd",
+            format: "yyyy-mm-dd 23:59:59",
             language: "pt-br"
         });
     });

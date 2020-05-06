@@ -62,7 +62,7 @@ namespace AuxEmergencial
                     aux.estado = estado.Text.Trim();
                     aux.complemento = complemento.Text.Trim();
                     aux.finalidade = cboxTipoCadastro.SelectedValue;
-                    aux.dataCadastro = DateTime.Today;
+                    aux.dataCadastro = DateTime.Now;
                     if (bee.Checked == true)
                     {
                         aux.bee = "SIM";

@@ -116,6 +116,8 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.pageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
@@ -152,20 +154,18 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.tableCell25 = new DevExpress.XtraReports.UI.XRTableCell();
             this.tableCell26 = new DevExpress.XtraReports.UI.XRTableCell();
             this.finalidade = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.table2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // dataInicial
             // 
             this.dataInicial.Name = "dataInicial";
-            this.dataInicial.ValueInfo = "2020-04-20";
+            this.dataInicial.ValueInfo = "2020-04-20 00:00:00";
             // 
             // dataFinal
             // 
             this.dataFinal.Name = "dataFinal";
-            this.dataFinal.ValueInfo = "2020-04-20";
+            this.dataFinal.ValueInfo = "2020-04-20 23:59:59";
             // 
             // sqlDataSource2
             // 
@@ -298,6 +298,28 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             this.ReportHeader.Dpi = 254F;
             this.ReportHeader.HeightF = 193.146F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrLabel19
+            // 
+            this.xrLabel19.Dpi = 254F;
+            this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?finalidade")});
+            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(203.8542F, 134.726F);
+            this.xrLabel19.Multiline = true;
+            this.xrLabel19.Name = "xrLabel19";
+            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(820.2084F, 58.42F);
+            this.xrLabel19.Text = "xrLabel19";
+            // 
+            // xrLabel18
+            // 
+            this.xrLabel18.Dpi = 254F;
+            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(15.99999F, 134.726F);
+            this.xrLabel18.Multiline = true;
+            this.xrLabel18.Name = "xrLabel18";
+            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 5, 0, 0, 254F);
+            this.xrLabel18.SizeF = new System.Drawing.SizeF(187.8542F, 58.42F);
+            this.xrLabel18.Text = "Finalidade:";
             // 
             // xrLabel17
             // 
@@ -895,28 +917,6 @@ public class XtraReport1 : DevExpress.XtraReports.UI.XtraReport
             // 
             this.finalidade.Name = "finalidade";
             this.finalidade.ValueInfo = "cadunico";
-            // 
-            // xrLabel18
-            // 
-            this.xrLabel18.Dpi = 254F;
-            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(15.99999F, 134.726F);
-            this.xrLabel18.Multiline = true;
-            this.xrLabel18.Name = "xrLabel18";
-            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel18.SizeF = new System.Drawing.SizeF(187.8542F, 58.42F);
-            this.xrLabel18.Text = "Finalidade:";
-            // 
-            // xrLabel19
-            // 
-            this.xrLabel19.Dpi = 254F;
-            this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?finalidade")});
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(203.8542F, 134.726F);
-            this.xrLabel19.Multiline = true;
-            this.xrLabel19.Name = "xrLabel19";
-            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(820.2084F, 58.42F);
-            this.xrLabel19.Text = "xrLabel19";
             // 
             // XtraReport1
             // 
